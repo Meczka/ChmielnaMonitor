@@ -23,7 +23,7 @@ public class WebhookUtils {
         System.out.println(item.getImageUrl());
         DiscordWebhook.EmbedObject embed = new DiscordWebhook.EmbedObject()
                 .setUrl(item.getItemLink())
-                .setTitle(item.getName())
+                .setTitle(item.getName().replace("\"","\\\""))
                 .setAuthor("NEW PRODUCT",null,null)
                 .setThumbnail(item.getImageUrl())
                 .setFooter("Hypemonitor " + dtf.format(now),"https://res.cloudinary.com/dklrin11o/image/twitter_name/w_600/Hypemonitorpl.jpg")
